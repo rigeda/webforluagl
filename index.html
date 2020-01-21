@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Titillium+Web&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet"> 
+    <title>Lua-gl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home -->
+    <section class="home" id="home">
+            <a href="logo"><img src="" alt=""></a>
+        <nav>
+            <li class="heading"><a class="active" href="#home">Home</a></li>
+            <button class="menu"><i class="fas fa-bars"></i></button>
+        <div class="innernav">
+            <button class="close"><i class="fas fa-times i"></i></button>
+            <li class="heading"><a href="#about">About</a></li>
+            <li class="heading"><a href="#demo">Demo</a></li>
+            <li class="heading"><a href="#install">Install</a></li>
+            <li class="heading"><a href="https://github.com/Deepak123bharat/lua-gl/wiki" target="_blank">Docs</a></li>
+            <li class="heading"><a href="#community">Community</a></li>
+        </div>
+    </nav> 
+    <div class="homeinner">
+        <div class="top">
+            <h1 class="heading">Lua-gl</h1>
+            <p>Create software like a schematic editor/flowchart creator/mind maps/block diagrams in Lua with just few lines of code.</p>
+            <a href="#about">Learn More</a>
+        </div>
+        <div class="side">
+            <img src="gifhome.png" alt="Robot Image">
+        </div>
+    </div>
+    </section>  
+    
+    <!-- About -->
+    <section class="about mod" id="about">
+        <h2 class="heading">Why Choose Lua-gl?</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ad! Voluptatem blanditiis non maxime et iste iusto placeat vitae dolorem, molestias deserunt? Autem, earum enim et id natus aut quibusdam.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio sequi, quisquam earum quod eveniet eaque iste similique quam, illum tempore doloribus exercitationem, commodi dolore laboriosam dicta libero reiciendis ab! Sint?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laudantium vitae repellendus cum tenetur officiis, odit repellat, beatae ipsa iste velit eligendi, a tempore. Cupiditate, veniam eos? Placeat, cupiditate animi?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tempora quibusdam voluptate ex nihil consequatur, quae a beatae dolore ducimus recusandae voluptatibus autem eius facilis fugit at doloribus iure commodi.
+        </p>
+    </section>
+
+    <!-- Demo -->
+    <section class="demo" id="demo">
+        <h3 class="heading">Demo Project Example</h3>
+        <div class="demoinner mod">
+            <div>
+                <img src="giphy.gif" alt="">
+            </div>
+            <div class="first">
+                <h4>Schematic Table Mind Maps</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <a href="">Learn More <i class="fas fa-arrow-right i"></i></a>
+            </div>
+        </div>
+        <div class="demoinner mod d2">
+            <div class="second">
+                <h4>Schematic Table Flowchart</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <a href="">Learn More <i class="fas fa-arrow-right i"></i></a>
+            </div>
+            <div class="demo2">
+                <img src="giphy1.gif" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation and usage -->
+    <section class="install mod" id="install">
+        <h3 class="heading">Installation and Usage</h3>
+            <p>
+First of all, you should have an IUP and CD library on your local system. <br>
+Download IUP from <a href="https://www.tecgraf.puc-rio.br/iup/" target="_blank">link</a> <br>
+Download CD from <a href="https://www.tecgraf.puc-rio.br/cd/" target="_blank">link</a> <br>
+Install lua-gl using luarocks <br> <br>
+            </p>
+            <div class="code">luarocks <span class="require">install</span> lua-gl</div>
+            <p>
+                Some examples of using the library. Full details can be found in the documentation. <br>
+
+To use the module simply do <br>
+<div class="code">
+<span class="require">require</span>(<span class="orange">"iuplua"</span>) <br>
+<span class="require">require</span>(<span class="orange">"iupluaimglib"</span>) <br>
+<span class="require">require</span>(<span class="orange">"cdlua"</span>) <br>
+<span class="require">require</span>(<span class="orange">"iupluacd"</span>) <br> <br>
+
+<span class="var">LGL</span> = <span class="require">require</span>(<span class="orange">"lua-gl"</span>)
+</div>
+            </p>
+            <p>Creating a canvas object</p>
+            <div class="code"><span class="var">cnvobj</span> = <span class="var">LGL</span>.<span class="require">new</span>{ <span class="var">grid_x</span> = <span class="const">40</span>, <span class="var">grid_y</span> = <span class="const">40</span>, <span class="var">width</span> = <span class="const">600</span>, <span class="var">height</span> = <span class="const">300</span>, <span class="var">gridVisibility</span> = <span class="bool">true</span> }</div>
+            <p>cnvobj is an object of the IUP canvas. Canvas can be accessed by cnvobj like canvas = cnvobj.cnv and we can perform operations on canvas using cnvobj.</p>
+            <div class="code">
+                <pre><span class="var">dlg</span> = <span class="var">iup</span>.<span class="require">dialog</span>{ 
+    <span class="var">iup</span>.<span class="require">vbox</span>{
+        <span class="var">iup</span>.<span class="require">label</span>{title = <span class="orange">"----------------Canvas1---------------"</span>},
+        <span class="var">cnvobj</span>.<span class="var">cnv</span>,
+    },
+    <span class="var">title</span> = <span class="orange">"lua-gl"</span>,
+}
+<span class="var">dlg</span>:<span class="require">showxy</span>(<span class="var">iup</span>.<span class="var">CENTER</span> , <span class="var">iup</span>.<span class="var">CENTER</span>)
+
+<span class="if">if</span> <span class="var">iup</span>.<span class="require">MainLoopLevel</span>() == <span class="const">0</span> <span class="if">then</span>
+   <span class="var">iup</span>.<span class="require">MainLoop</span>()
+   <span class="var">iup</span>.<span class="require">Close</span>()
+<span class="if">end</span> </pre>
+            </div>
+    </section>
+
+    <!-- Community -->
+    <section class="community mod" id="community">
+        <h3>Our Community</h3>
+        <p class="headingp">The Lua-gl community is an active group of developers, problem solvers, and researchers. The door is always open to contribute, collaborate and share your ideas.</p>
+        <div class="communityinner">
+            <div class="personinfo">
+                <div>
+                    <img src="testperson.jpg" alt="Contributor">
+                </div>
+                <div class="info">
+                    <h5 class="heading">Deepak Kumar</h5>
+                    <h6>CEO and Co-Founder of Something</h6>
+                    <div class="contacticon">
+                        <a href="" target="_blank"><i class="fab fa-github-square"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="personinfo">
+                <div>
+                    <img src="testperson.jpg" alt="Contributor">
+                </div>
+                <div class="info">
+                    <h5 class="heading">Jason Bourne</h5>
+                    <h6>Agent of MI6 and FBI</h6>
+                    <div class="contacticon">
+                        <a href="" target="_blank"><i class="fab fa-github-square"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        Copywrite <i class="fas fa-copyright i"></i> Lua-gl 2020 - All Right Reserved
+    </section>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="all.min.js"></script>
+    <script src="solid.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
