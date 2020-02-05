@@ -28,7 +28,7 @@
     <div class="homeinner">
         <div class="top">
             <h1 class="heading">Lua-gl</h1>
-            <p>Create software like a schematic editor/flowchart creator/mind maps/block diagrams in Lua with just few lines of code.</p>
+            <p>Graphical library to handle the hard parts of creating software like electronic schematic editor/flowchart creator/mind maps/block diagrams in Lua with just a few lines of code.</p>
             <a href="#about">Learn More</a>
         </div>
         <div class="side">
@@ -41,10 +41,36 @@
     <section class="about mod" id="about">
         <h2 class="heading">Why Choose Lua-gl?</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ad! Voluptatem blanditiis non maxime et iste iusto placeat vitae dolorem, molestias deserunt? Autem, earum enim et id natus aut quibusdam.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio sequi, quisquam earum quod eveniet eaque iste similique quam, illum tempore doloribus exercitationem, commodi dolore laboriosam dicta libero reiciendis ab! Sint?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laudantium vitae repellendus cum tenetur officiis, odit repellat, beatae ipsa iste velit eligendi, a tempore. Cupiditate, veniam eos? Placeat, cupiditate animi?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tempora quibusdam voluptate ex nihil consequatur, quae a beatae dolore ducimus recusandae voluptatibus autem eius facilis fugit at doloribus iure commodi.
+            First why choose Lua? Lua is:
+			<ul>
+			<li>Very small</li>
+			<li>Extremely powerful</li>
+			<li>Very easy to learn for people from a non programming background or profession because:
+				<ul>
+					<li>It has a simple syntax</li>
+					<li>It has a single data structure</li>
+				</ul>
+			</li>
+			<li>Well proven language of choise in well known projects like:
+				<ul>
+					<li>Mediawiki (Wikipedia)</li>
+					<li>Wireshark</li>
+					<li>World of Warcraft</li>
+					<li>LuaTex</li>
+					<li>NMAP</li>
+					<li>Celestia</li>
+					<li>and so on...</li>
+				</ul>
+			</li>
+			</ul>
+			These reasons by themself make it a very powerful language for newcomers to adopt to get things done. <br><br>
+			
+			<ul>
+			<li><b>Lua-GL finally modularizes the design of complex software in a language that can be adapted by non expert programmers.</b></li> Most graphical software are mamoth code bases in languages such as C/C++/.NET/Java which are comparitively harder to adopt than languages like Python, Ruby and Lua. On top of that they don't incorporate modularity and flexibility by abstracting away the design into multiple layers. 
+			<li><b>Lua-GL aims to provide the 1st level library in a well chosen simple scripting language that can provide all the mechanisms to create complex graphical software</b></li> Software like a electronic schematic editor or a block diagram creator software similar to Microsoft Visio. It abstract away all the complex graphical operations and provides a simple extensible API that can be used to create a software with custom behavior, functionality and workflow. 
+			<li><b>Lua-GL even goes a step further by abstracting away the underlying GUI framework</b></li> to make it easy to swap it for say QT or even Javascript routines now that we can run Lua directly on the browser (fengari link)
+			</ul>
+   With these design choices for Lua-GL it simply makes things a lot easier, faster, interoperable and more scalable for projects using it.
         </p>
     </section>
 
@@ -57,14 +83,14 @@
             </div>
             <div class="first">
                 <h4>Creating complex shapes by grouping</h4>
-                <p>The schematic editor is created through a lua-gl. by using editor we can create a transistor with the help of the circle and lines. The transistor can be saved and we can load it.</p>
+                <p>Lua-GL provides basic shapes which can be grouped to form complex shapes such as a PNP bipolar transistor symbol shown here in the demo application.</p>
                 
             </div>
         </div>
         <div class="demoinner mod d2">
             <div class="second">
-                <h4>Creating Objects and Adding ports</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <h4>Adding ports to objects</h4>
+                <p>Lua-GL provides mechanisms to add ports. A port is any point which is sticky to connectors. Your application decides and controls how they look. The demo application here shows ports being added to objects.</p>
                 
             </div>
             <div class="demo2">
@@ -77,14 +103,14 @@
             </div>
             <div class="first">
                 <h4>Adding connectors between ports</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <p>Lua-GL provides mechanisms to add connectors. Your application decides how they look or route. The demo application shows one implementation of the connectors that is possible.</p>
                 
             </div>
         </div>
         <div class="demoinner mod d2">
             <div class="second">
                 <h4>Dragging objects</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <p>Lua-GL provides the mechanisms to drag objects/connectors. Dragging items maintains their connector interconnections. Your application decides how dragging behaves and looks. The demo application shows one implementation of dragging.</p>
                 
             </div>
             <div class="demo2">
@@ -97,14 +123,14 @@
             </div>
             <div class="first">
                 <h4>Dragging Connector Segments</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <p>The demo application shows here an implementation of dragging the parts of a connector to reshape it.</p>
                 
             </div>
         </div>
          <div class="demoinner mod d2">
             <div class="second">
                 <h4>Autorouting</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat error, obcaecati illum doloremque ipsam at, corrupti quo quasi, laboriosam rerum incidunt sapiente. Aliquam, ea! Excepturi sapiente fugiat assumenda modi nisi!</p>
+                <p>Lua-GL comes with its own auto-router to find the shortest path for connector routing if your application decides to use it. Your application can add its own router with routing policies quite easily. The demo application here shows the autorouter in action.</p>
                 
             </div>
             <div class="demo2">
